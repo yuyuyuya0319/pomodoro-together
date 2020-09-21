@@ -2,9 +2,11 @@ import { getElapsedSeconds, Timer } from './timer';
 
 describe('timer', () => {
   describe('#getElapsedSeconds', () => {
+    const totalSeconds = 60 * 25;
+
     describe('by default', () => {
       it('returns 0', () => {
-        const timer: Timer = { points: [] };
+        const timer: Timer = { totalSeconds, points: [] };
         const result = getElapsedSeconds(timer, new Date());
 
         expect(result).toEqual(0);
@@ -15,7 +17,10 @@ describe('timer', () => {
       describe('unless a second has passed', () => {
         it('returns 0', () => {
           const now = new Date();
-          const timer: Timer = { points: [{ time: now, type: 'start' }] };
+          const timer: Timer = {
+            totalSeconds,
+            points: [{ time: now, type: 'start' }],
+          };
           const result = getElapsedSeconds(timer, now);
 
           expect(result).toEqual(0);
@@ -26,7 +31,10 @@ describe('timer', () => {
         it('returns 10', () => {
           const start = new Date(2020, 0, 1, 0, 0, 0);
           const now = new Date(2020, 0, 1, 0, 0, 10);
-          const timer: Timer = { points: [{ time: start, type: 'start' }] };
+          const timer: Timer = {
+            totalSeconds,
+            points: [{ time: start, type: 'start' }],
+          };
           const result = getElapsedSeconds(timer, now);
 
           expect(result).toEqual(10);
@@ -42,6 +50,7 @@ describe('timer', () => {
             const pause = new Date(2020, 0, 1, 0, 0, 10);
             const now = new Date(2020, 0, 1, 0, 0, 10);
             const timer: Timer = {
+              totalSeconds,
               points: [
                 { time: start, type: 'start' },
                 { time: pause, type: 'pause' },
@@ -59,6 +68,7 @@ describe('timer', () => {
             const pause = new Date(2020, 0, 1, 0, 0, 10);
             const now = new Date(2020, 0, 1, 0, 0, 20);
             const timer: Timer = {
+              totalSeconds,
               points: [
                 { time: start, type: 'start' },
                 { time: pause, type: 'pause' },
@@ -81,6 +91,7 @@ describe('timer', () => {
             const start2 = new Date(2020, 0, 1, 0, 0, 15);
             const now = new Date(2020, 0, 1, 0, 0, 15);
             const timer: Timer = {
+              totalSeconds,
               points: [
                 { time: start1, type: 'start' },
                 { time: pause, type: 'pause' },
@@ -100,6 +111,7 @@ describe('timer', () => {
             const start2 = new Date(2020, 0, 1, 0, 0, 15);
             const now = new Date(2020, 0, 1, 0, 0, 45);
             const timer: Timer = {
+              totalSeconds,
               points: [
                 { time: start1, type: 'start' },
                 { time: pause, type: 'pause' },
