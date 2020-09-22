@@ -19,16 +19,11 @@
 }
 
 .PomodoroTimer-clock-pause {
-  background: rgb(38, 198, 70);
+  background: rgba(196, 77, 26, 0.653);
   color: #fff;
 }
 
-.PomodoroTimer-clock-start {
-  background: rgb(223, 67, 67);
-  color: #fff; 
-}
-
-.PomodoroTimer-clock-done {
+.PomodoroTimer-clock-start, .PomodoroTimer-clock-done {
   background: rgb(223, 67, 67);
   color: #fff; 
 }
