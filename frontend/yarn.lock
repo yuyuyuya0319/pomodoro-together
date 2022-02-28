@@ -1011,6 +1011,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.12.5":
+  version "7.17.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.10.4.tgz#3251996c4200ebc71d1a8fc405fba940f36ba278"
@@ -1458,12 +1465,12 @@
     "@babel/runtime" "^7.11.2"
     "@testing-library/dom" "^7.24.2"
 
-"@testing-library/user-event@12.1.6":
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.1.6.tgz#f550b138dfdc20387b89cbe3e9f3d969ab10c2bd"
-  integrity sha512-BdSe6cmzDEapTBH3s1NKbzu+GyX5bJKraKwVpM2vZF1+EEWxZr0EiA0z9bA5Nux8P+6nKMOZKsXQrj5q/kicfQ==
+"@testing-library/user-event@13.5.0":
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.5.0.tgz#69d77007f1e124d55314a2b73fd204b333b13295"
+  integrity sha512-5Kwtbo3Y/NowpkbRuSepbyMFkZmHgD+vPzYB/RJ4oxt5Gj/avFFBYjhw27cqSVPVw/3a67NK1PbiIr9k4Gwmdg==
   dependencies:
-    "@babel/runtime" "^7.10.2"
+    "@babel/runtime" "^7.12.5"
 
 "@types/aria-query@^4.2.0":
   version "4.2.0"
